@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", fadeInOnScroll);
-    fadeInOnScroll(); // Llamamos a la función al cargar por si ya está en pantalla
+    fadeInOnScroll(); 
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -32,4 +32,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", fadeInOnScroll);
     fadeInOnScroll(); // Llamamos a la función al cargar por si ya está en pantalla
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const enlaceProgramacion = document.querySelector('a[href="#programacion-movil"]');
+
+    enlaceProgramacion.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        const seccionProgramacion = document.getElementById("programacion-movil");
+        seccionProgramacion.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const enlaceProgramacion = document.querySelector('a[href="#diseño-opo"]');
+
+    enlaceProgramacion.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        const seccionProgramacion = document.getElementById("diseño-opo");
+        seccionProgramacion.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const image = document.getElementById("expandible");
+    const overlay = document.createElement("div");
+    overlay.id = "overlay";
+
+    // Crear el mensaje
+    const message = document.createElement("div");
+    message.className = "message";
+    message.textContent = "Presiona 'Esc' para salir de la vista de pantalla completa";
+    overlay.appendChild(message);
+
+    document.body.appendChild(overlay);
+
+    image.addEventListener("click", function () {
+        image.classList.add("expanded");
+        overlay.style.display = "block";
+    });
+
+    overlay.addEventListener("click", function () {
+        image.classList.remove("expanded");
+        overlay.style.display = "none";
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            image.classList.remove("expanded");
+            overlay.style.display = "none";
+        }
+    });
 });

@@ -10,6 +10,9 @@ body {
     background-color: #000000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 .container {
     display: flex;
@@ -18,7 +21,7 @@ body {
     align-content: start;
 }
 
-/* header */
+/*======================================== header ======================================== */
 .item:nth-child(1) {
     position: fixed;
     top: 0;
@@ -113,7 +116,7 @@ body {
     transform: scale(1.1);
 }
 
-/* principal */
+/*======================================== principal======================================== */
 
 .item:nth-child(2) {
     flex-grow: 1;
@@ -158,12 +161,13 @@ h2 {
 }
 
 
-/* programaciones moviles */
+/*======================================== programaciones moviles ======================================== */
 .item:nth-child(3) {
     width: 100%;
     height: 5%;
     min-height: 80vh;
     background-color: rgb(0, 0, 0);
+
 }
 
 .griego1 {
@@ -171,163 +175,155 @@ h2 {
     opacity: 0;
     position: absolute;
     right: 0px;
-    top:960px;
+    top: 960px;
     transform: translateX(0px);
-    /* Lo desplazamos para que entre desde la derecha */
+
 }
 
-/* programacion movil */
-.pro{
+.pro {
     letter-spacing: normal;
     font-size: 2rem;
 }
 
-.cont {
-    display: flex;
-    /* gap: 2%; */
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
-.cent-cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item1 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item2 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item3 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item4 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item5 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item6 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item7 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item8 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item9 {
-    width: 32%;
-    height: 32%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.card {
-    width: 290px;
-    height: 140px;
-    padding: 0.5rem;
-    background: rgba(198, 198, 198, 0.34);
-    border-radius: 8px;
-    backdrop-filter: blur(5px);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
-    border-left: 2px rgba(255, 255, 255, 0.545) outset;
-    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
-    transform: skewX(10deg);
-    transition: .4s;
+.e-card {
+    margin: 100px auto;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+    position: relative;
+    width: 340px;
+    height: 330px;
+    border-radius: 16px;
     overflow: hidden;
-    color: white;
 }
 
-.card:hover {
-    height: 254px;
-    transform: skew(0deg);
+.wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg, #09080a, #282442 60%, #395052);
 }
 
-.align {
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-self: flex-start;
+.icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
 }
 
-.red {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ff605c;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
-}
-
-.yellow {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ffbd44;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
-}
-
-.green {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #00ca4e;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
-}
-
-.card h1 {
+.infotop {
     text-align: center;
-    margin: 0.4rem;
-    color: rgb(218, 244, 237);
-    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    /* text-transform: lowercase; */
+}
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+    top: 210px;
+}
+
+.playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+}
+
+.wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+}
+
+.wave:nth-child(2) {
+    animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+}
+
+.wave:nth-child(3) {
+    animation-duration: 45s;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.imgtarea{
+    width: 160px;
+}
+
+#expandible.expanded {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    width: 78vw; 
+    height: auto; 
+    object-fit: contain;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: none;
+}
+
+#overlay .message {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+/*======================================== Diseño orientada a objetos ======================================== */
+.item:nth-child(4) {
+    width: 100%;
+    height: 5%;
+    min-height: 80vh;
+    /* background-color: rgb(0, 0, 0); */
+
 }
 
 .griego2 {
@@ -335,7 +331,130 @@ h2 {
     opacity: 0;
     position: absolute;
     right: 1400px;
-    top:1740px;
+    top: 1740px;
     transform: translateX(100px);
-    /* Lo desplazamos para que entre desde la derecha */
+}
+
+/*======================================== curriculum ======================================== */
+.cur {
+    text-align: center;
+}
+
+.container_Curriculum {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 5%;
+
+    background-color: rgb(0, 0, 0);
+}
+
+.itemtitulo {
+    width: 100%;
+}
+
+.itemfoto {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.foto {
+    width: 490px;
+
+}
+
+.itempala {
+    flex-grow: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imageneslenguajes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17%;
+}
+.imgcol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgitem{
+    width: 151%;
+    transition: 0.3s ease;
+}
+.imgitem:hover {
+    transform: scale(1.1); 
+    border-radius: 20%;
+    box-shadow: 0 0 20px #4493e9;
+    background-color:#0d1117; ;
+}
+
+.imgitem1:hover {
+    transform: scale(1.1); 
+    border-radius: 20%;
+    box-shadow: 0 0 20px #f26529;
+    background-color:#e44d25; ;
+}
+.imgitem2:hover {
+    transform: scale(1.1); 
+    border-radius: 20%;
+    box-shadow: 0 0 20px #2a65f0;
+    background-color:#264de4; ;
+}
+.imgitem3:hover {
+    transform: scale(1.1); 
+    border-radius: 20%;
+    box-shadow: 0 0 20px #f0dc4e;
+    background-color:#f0dc4e; ;
+}
+.imgitem4:hover {
+    transform: scale(1.1); 
+    border-radius: 20%;
+    box-shadow: 0 0 20px #007cc7;
+    background-color:#005199; ;
+}
+.imgitem5:hover {
+    transform: scale(1.1); 
+    border-radius: 20%;
+    box-shadow: 0 0 20px #336fa1;
+    background-color:#f7cb3f; ;
+}
+
+.parra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+}
+
+.parrafo{
+    text-align: justify;
+    font-size: 15px;
+}
+.parrafoH:hover{
+    border-radius: 20%;
+    box-shadow: 0 0 40px #1a89e4;
+}
+.puntohabi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14%;
+    text-align: justify;
+    width: 160px;
+
+}
+.habilidades{
+    text-align: center;
 }
